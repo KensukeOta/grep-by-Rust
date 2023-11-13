@@ -12,11 +12,6 @@ fn main() {
         process::exit(1);
     });
     
-    //  {}を探しています
-    println!("Searching for {}", config.query);
-    //  {}というファイルの中
-    println!("In file {}", config.filename);
-
     if let Err(e) = minigrep::run(config) {
         println!("Application error: {}", e);
 
